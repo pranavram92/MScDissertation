@@ -1,0 +1,846 @@
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 1400px;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  border-color: #014e58;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #014e58;
+  color: white;
+}
+
+.Button-VIewTransactions {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #04AA6D;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.backbutton {
+  top: 10px;
+  left: 10px;
+  padding: 8px 16px;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.txn--logout {
+  top: 10px;
+  left: 10px;
+  padding: 8px 16px;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+}
+
+.buttons-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.buttons-flex .btn-success:first-child {
+  font-size: 12px;
+  background-color: #014e58;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+}
+
+.buttons-flex .btn-success:last-child {
+  background-color: #014e58;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.acc-headers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.acc-heading {
+  justify-self: flex-start;
+}
+
+.accpage-paymentbutton,
+.accpage-SAbutton,
+.accpage-FCbutton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.Connect-Button {
+  background-color: #014e58;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.accounts-container{
+  background-color: #FFF3E0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sr-only{
+padding-left: 20px;
+}
+.loading-container{
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+.accounts-button {
+  margin: 0 auto;
+  text-align: center;
+  float: center;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #04AA6D;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  height: 50px;
+  width: 200px;
+  color: white;
+  cursor: pointer;
+}
+
+.no-txns {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.css-hlj6pa-MuiDialogActions-root {
+  display: none !important;
+}
+
+.sa-dropdowns {
+  display: flex;
+  justify-content: center;
+}
+
+.dd-2 {
+  padding-left: 10px;
+
+}
+
+.e-ddl.e-input-group.e-control-wrapper .e-input {
+  color: #04AA6D;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit.MuiIconButton-sizeMedium.MuiPickersToolbar-penIconButton {
+  display: none !important;
+}
+
+.css-1hbyad5-MuiTypography-root {
+  display: none !important;
+}
+
+.css-169iwlq-MuiCalendarPicker-root {
+  position: absolute;
+  box-shadow: 3px 2px 10px 5px grey !important;
+}
+
+.css-jhsfre-MuiGrid-root-MuiPickersToolbar-content {
+  justify-content: center !important;
+  place-items: center;
+  padding: 1rem;
+}
+
+.css-1vcokmn-MuiCalendarOrClockPicker-root {
+  position: absolute;
+  margin-left: 220px;
+}
+
+.calendar-description {
+  position: absolute;
+  padding: 2em;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+
+.calendar-event-header {
+  color: #014e58;
+  margin-top: 150px;
+}
+
+.calendar-event-description {
+  position: absolute;
+
+}
+
+input[type=text],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.transfer-button {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.transfer-button:hover {
+  background-color: #45a049;
+}
+
+.form {
+  margin-top: 25px;
+}
+
+.spend-analysis-introduction {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.spend-analysis-introduction-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.spend-analysis-introduction-text {
+  font-size: 16px;
+}
+
+.transaction-heading {
+  text-align: center;
+}
+
+#dd-timeFrame {
+  width: 300px;
+  margin-right: 15px;
+}
+
+#dd-Month {
+  width: 300px;
+  margin-right: 15px;
+}
+
+#dd-ChartType {
+  width: 300px;
+
+}
+
+#dd-ComparisonMonth {
+  width:300px;
+  margin-right: 15px;
+}
+
+.calendar-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calendar-badge {
+  cursor: pointer;
+}
+
+.calendar-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendar-details {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.table-pagination-footer {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.dd-table {
+  width: 250px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.logo-container {
+  margin-bottom: 30px;
+}
+
+.logo-image {
+  width: 400px; 
+  height:auto;
+  margin-left: 500px;
+}
+
+.form-login-logo-container{
+  margin-top:105px;
+  max-width: 30%;
+  max-height:auto;
+  width: auto;
+  height: auto;
+  margin-bottom: 60px;
+}
+
+.registration-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #FFF3E0;
+  margin-left: auto;
+  margin-bottom: 80px;
+}
+
+.registration-form-Heading {
+  margin-right: 55px;
+  color: #014e58;
+  font-weight: bolder;
+}
+
+.form-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.form-group-1 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group-label {
+  font-weight: bold;
+}
+
+.form-group-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-button {
+  padding: 10px 20px;
+  background-color: #014e58;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bolder;
+  width: 360px;
+  margin-bottom: 12px;
+}
+
+.form-button:hover {
+  background-color: #007a89;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white ;
+  height: 100vh;
+}
+
+.login-form-container {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  margin-left: 500px;
+  background-color: #FFF3E0;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 120px;
+}
+
+.login-form-Heading {
+  color: #014e58;
+  font-weight: bolder;
+  margin-left:120px;
+  margin-top:10px;
+}
+
+.reCaptcha {
+  transform:scale(0.77);
+-webkit-transform:scale(0.77);
+transform-origin:0 0;
+-webkit-transform-origin:0 0;
+}
+
+.reset-form {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto; 
+  margin-top: 100px;
+  background-color: #FFF3E0;
+}
+
+.reset-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reset-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reset-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reset-form input[type="email"] {
+  margin: 5px 0;
+  padding: 10px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 3px;
+}
+
+.reset-form .d-grid {
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.reset-form .btn-primary {
+  background-color: #014e58;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.reset-form .btn-primary:hover {
+  background-color: #014e58;
+}
+
+.reset-form .btn-success {
+  margin-bottom: 20px;
+}
+
+.welcomepage-container {
+  background-color: #FFF3E0 ;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo2 {
+  width: 120px; 
+  height: auto; 
+  margin-bottom: 20px;
+}
+
+.container-welcomedescription{
+  text-align: center;
+  padding-bottom: 300px;
+}
+
+.title-welcomepage{
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description-welcomepage{
+  font-size: 18px;
+}
+
+.welcomepage-logoutbutton{
+  background-color: #014e58;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-welcomepage{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  background-color:#014e58 ;
+}
+
+.trademark-welcomepage{
+  font-weight: bold;
+  color: white;
+}
+
+.accpage-paymentbutton{
+  background-color: #014e58;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.accpage-SAbutton{
+  background-color: #014e58;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.accpage-FCbutton{
+  background-color: #014e58;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.accountpage-txnbutton{
+  background-color: #014e58;
+  padding: 7px 15px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.accpage-logout{
+  background-color: #014e58;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.txn-container{
+  background-color: #FFF3E0 ;
+  height: 150vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.prevButton{
+  background-color: #014e58;
+}
+
+.nxtButton{
+  background-color: #014e58;
+}
+
+.prevButton:hover,
+.nxtButton:hover {
+  background-color: #FFF3E0;
+  color: black;
+}
+
+.prevButton:disabled,
+.nxtButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.buttons-flex-txn{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.btn-back-to-login{
+  background-color: #014e58;
+  top: 20px;
+  left: 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
+  border: none;
+  color: white;
+  height: 45px;
+  width: 160px;
+}
+
+.reset-form {
+  margin-top: 100px; 
+}
+
+.resetpassword{
+  background-color: white ;
+  height: 100vh;
+}
+
+.txn-heading{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:500px;
+  margin-bottom: 10px;
+}
+
+.logo2-txnpage{
+  width: 120px; 
+  height: auto;
+  padding-right: 20px;
+}
+.transaction-heading{
+  padding-top: 50px;
+}
+
+.payment-main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #FFF3E0;
+  margin-top: 100px;
+}
+
+.transfer-button-paymentpage {
+  background-color: #014e58;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.transfer-button-paymentpage:hover{
+  background-color: #007a89;
+}
+
+.transfer-button2-paymentpage{
+  background-color: #014e58;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.transfer-button2-paymentpage:hover{
+  background-color: #007a89;
+}
+
+.payment-transfer-back{
+  font-size: 12px;
+  background-color: #014e58;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+}
+
+.payment-transfter-logout{
+  background-color: #014e58;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.paymentpage-head{
+  margin-left: 100px;
+  margin-bottom: 15px;
+}
+
+.form-paymentpage label {
+  font-weight: bold;
+}
+
+.form-paymentpage input {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.paymentpage-headercontainers {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+  margin-bottom: 15px;
+}
+
+.logo2-paymentpage {
+  width: 80px; 
+  height: 70px; 
+  margin-right: 10px; 
+}
+
+.paymentpage-head {
+  margin: 0;  
+}
+
+.backbutton-calendarpage{
+  font-size: 12px;
+  background-color: #014e58;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+}
+
+.logout-calendarpage{
+  background-color: #014e58;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.calendar-container{
+  background-color: #FFF3E0;
+}

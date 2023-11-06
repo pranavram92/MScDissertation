@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <style>
+    .form-container {
+      width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-left: 500px;
+      margin-top: 100px;
+      background-color: #FFF3E0;
+    }
+
+    .form-container h2 {
+      text-align: center;
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container form input[type="password"] {
+      margin: 5px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .form-container form p {
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .form-container form input[type="submit"] {
+      background-color: #014e58;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .form-container form input[type="submit"]:hover {
+      background-color: #014e58;
+    }
+  </style>
+  <script>
+    function validatePassword() {
+      const passwordInput = document.getElementById("password").value;
+      const confirmPasswordInput = document.getElementById("confirmPassword").value;
+
+      const password_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%*]).{8,24}$/;
+      const isValidPassword = password_REGEX.test(passwordInput);
+
+      if (passwordInput !== confirmPasswordInput) {
+        alert("Passwords do not match. Please make sure both passwords are the same.");
+        return false;
+      }
+
+      if (!isValidPassword) {
+        alert("Sorry, Password not Accepted. Please change as Instructed.");
+        return false;
+      }
+  }
+  var status = '<%- JSON.stringify(status) %>';
+  
+  if (JSON.parse(status) == 'verified') {
+      if (confirm("Password Successfully Updated. Do you wish to proceed to Login?")) {
+        window.location.href = "http://localhost:5173/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Reset Password For
+      <%= email%>
+    </h2>
+    <form action="" method="POST" onsubmit="return validatePassword()">
+      <input type="password" name="password" id="password" placeholder="Enter New Password" />
+      <p id="pwdnote" class="form-instructions">
+        Must include 8 to 24 characters, uppercase and lowercase letters, a number and a special character.<br />
+        Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span>
+        <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span
+          aria-label="percent">%</span><span aria-label="asterik">*</span>
+      </p>
+      <input type="password" name="confirmPassword" id="confirmPassword"
+        placeholder="Confirm New Password" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+
+</body>
+
+</html>
